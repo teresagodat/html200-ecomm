@@ -4,14 +4,15 @@
   <title>Winter Scarves</title>
 
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/main.css">
-
-  <!-- replace with your personal Font Awesome CDN link -->
+  <!-- replace with your personal Font Awesome CDN link -
   <script src="https://use.fontawesome.com/???.js"></script>
+  -->
 </head>
-
 <body>
   <header>
     <nav>
@@ -24,37 +25,33 @@
         </li>
       </ul>
     </nav>
-
+    <img src="images/logo-scarfcat.png" alt="scarfcat logo"/>
     <h1>Winter Wear Warehouse</h1>
   </header>
-
   <aside>
-    <form>
+     <form name="filter" onsubmit="selValue();">
       <label>Filter By:
-        <select name="filter">
+        <select id="selection">
           <option value="">Choose One</option>
           <option value="price">Price</option>
           <option value="name">Name</option>
         </select>
       </label>
-
       <input type="submit" value="Sort">
     </form>
   </aside>
-
   <section>
     <h2>Scarves</h2>
     <div class="item-container">
       <div class="item">
-        <h3>Reversible Plaid:</h3>
-        <ul>
-            <li>Price: 26.99</li>
-            <li>Description: Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</li>
-        </ul>
+        <h3>Reversible Plaid</h3>
+        <img src="images/reversible-plaid.jpg" alt="reversible plaid scarf">
+        <p>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
+        <p>26.99</p>
+        </div>
       </div>
     </div>
   </section>
-
   <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
