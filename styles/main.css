@@ -53,6 +53,10 @@ h2, h3 {
     text-align: center;
 }
 
+main  {
+    padding-top: 5rem;
+}
+
 .nav-container {
     display: -webkit-flex;
     display: flex;
@@ -99,7 +103,6 @@ select {
     border: none;
     width: 7rem;
     margin-top: .5rem;
-    border-radius:2rem;
     background-color: aliceblue;
     font-family: serif;
     border: .1rem solid blue;
