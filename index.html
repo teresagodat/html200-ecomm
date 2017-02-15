@@ -2,56 +2,65 @@
 <html>
 <head>
   <title>Winter Scarves</title>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-  <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="styles/main.css">
-  <!-- replace with your personal Font Awesome CDN link -
-  <script src="https://use.fontawesome.com/???.js"></script>
-  -->
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet"> 
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#">Hats</a></li>
-        <li><a href="#">Gloves</a></li>
-        <li><a href="#">Scarves</a></li>
-        <li class="cart-info">
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-        </li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="#">Hats</a></li>
+          <li><a href="#">Gloves</a></li>
+          <li><a href="#">Scarves</a></li>
+          <li class="cart-info">
+             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <img src="images/logo-scarfcat.png" alt="scarfcat logo"/>
-    <h1>Winter Wear Warehouse</h1>
+    <h1>Winter Wear<span></span> Warehouse</h1>
   </header>
-  <aside>
-     <form name="filter" onsubmit="selValue();">
-      <label>Filter By:
-        <select id="selection">
-          <option value="">Choose One</option>
-          <option value="price">Price</option>
-          <option value="name">Name</option>
-        </select>
-      </label>
-      <input type="submit" value="Sort">
-    </form>
-  </aside>
-  <section>
+    <aside>
+      <div class="section group">
+      <form name="filter" onsubmit="selValue();">
+        <label>Filter By:
+          <select id="selection">
+            <option value="">Choose One</option>
+            <option value="price">Price</option>
+            <option value="name">Name</option>
+          </select>
+        </label>
+        <input class="button" type="submit" value="Sort">
+      </form>
+      </div>
+    </aside>
+    <section>
     <h2>Scarves</h2>
-    <div class="item-container">
-      <div class="item">
-        <h3>Reversible Plaid</h3>
-        <img src="images/reversible-plaid.jpg" alt="reversible plaid scarf">
-        <p>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
-        <p>26.99</p>
+      <div class="item-container">
+        <div class="item">
+          <h3>Reversible Plaid</h3>
+          <img src="images/reversible-plaid.jpg" alt="reversible plaid scarf">
+          <p>
+              Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.
+          </p>
+          <p>
+              26.99
+          </p>
         </div>
       </div>
-    </div>
-  </section>
-  <script type="text/javascript" src="js/script.js"></script>
-</body>
+    </section>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
