@@ -25,12 +25,15 @@
         </ul>
       </nav>
     </div>
-    <img src="images/logo-scarfcat.png" alt="scarfcat logo"/>
+    <img srcset="images/logo-scarfcat-100w.png 100 w, images/reversible-plaid-50.jpg 50 w, images/reversible-plaid-25w.jpg 25 w," 
+          sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+          src="images/logo-scarfcat-50w.png" alt="scarfcat logo">
     <h1>Winter Wear<span></span> Warehouse</h1>
   </header>
-    <main>
-    <aside>
+      <section>
       <div class="section group">
+  </div>
+     <div class="col span_1_of_2"> 
       <form name="filter" onsubmit="selValue();">
         <label>Filter By:
           <select id="selection">
@@ -42,9 +45,11 @@
         <input class="button" type="submit" value="Sort">
       </form>
       </div>
-    </aside>
-    <section>
-    <h2>Scarves</h2>
+  </div>
+  <h2>Scarves</h2>
+   <div class="section group">
+		  <div class="col span_2_of_2">
+    
       <div class="item-container">
         <div class="item">
           <h3>Reversible Plaid</h3>
@@ -52,18 +57,25 @@
                     sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
                     src="images/reversible-plaid-150w.jpg"
                     alt="reversible plaid scarf">
-          </div>
           <p>
               Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.
           </p>
+          <br>
           <p>
               26.99
           </p>
+          </div>
+          </div>
         </div>
       </div>
     </section>
     <script type="text/javascript" src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   </main>
+  <footer>
+    <p>
+        This is the footer
+    </p>
+  </footer>
   </body>
 </html>

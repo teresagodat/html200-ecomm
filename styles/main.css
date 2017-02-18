@@ -1,28 +1,63 @@
 aside     {    
     display: flex;
-    width: 10rem;
+    width: 8rem;
     float: left;
-    display: inline;
-    padding: 1rem;
-    margin-right: 1rem;
+    margin-right: 2rem ;
+    margin-top: 5rem;
   }
+
+body {
+    background-color: #C3CDDB;
+}
 .button {
-    background-color: lightsteelblue;
+    background-color: white;
     font-family: serif;
     width: 3rem;
     margin-top: .5rem;
 }
 
+footer {
+    clear: both;
+    background-color:  #C3CDDB;
+    color: black;
+    height: 5rem;
+    padding: 1rem;
+    text-align: center;
+}
 
 .item-container {
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: space-between;
     justify-content: space-between;
-    width: 20rem;
+    width: 10rem;
     height: 20rem;
     margin: 5rem;
-    border: .25rem solid black;
+    padding-left: 1rem;
+    border: .20rem solid #C3CDDB;
+;
+  
+}
+
+.item h3 {
+    float: bottom;
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+}
+
+.item img {
+    float: center;
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    max-width: 100%;
+    max-height: 100;
+    padding-left: 1.5rem;
+}
+
+.item p {
+  font-size: .9rem;
+  text-align: center;
 }
 
 header {
@@ -31,8 +66,7 @@ header {
 
 header img  {
     float: left;
-    width: 5;
-    height: 6.5rem;
+    height: 50%;
     padding: .5rem;
 }
 
@@ -45,11 +79,6 @@ header h1 {
     margin-top: 1rem;
     margin-left: 5rem;
     line-height: 2rem; 
-}
-
-h2, h3 {
-    font-family: 'Luckiest Guy', cursive;
-    text-align: center;
 }
 
 main  {
@@ -86,15 +115,8 @@ nav ul{
 }
 
 
-section {
-    padding-left: 10rem;
-}
 
-section img {
-    float: center;
-    display: inline;
- 
-}
+
 
 select {
     width: 100%;
@@ -104,6 +126,52 @@ select {
     background-color: aliceblue;
     font-family: serif;
     border: .1rem solid blue;
+}
+
+h2 {
+    flex:auto;
+    color: #3D7FCF;
+    font-size: 1.5rem;
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+  
+}
+.span_1_of_2 {
+	    width: 5%;
+      display: flex;
+      float: left;
+      margin-top: 5rem;
+      margin-right: 4rem;
+  }
+
+
+.span_2_of_2 {
+      display: flex;
+      margin-top: 2.5%;
+      margin-right: 15%;
+      margin-left: 10%;
+      max-height: 100%;
+      width: 80%;
+      background-color: white;
+}
+
+.span_2_of_2 h2 {
+    color: #3D7FCF;
+    font-size: 1.5rem;
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+}
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span_2_of_2 {
+		width: 100%; 
+	}
+	.span_1_of_2 {
+		width: 100%; 
+	}
 }
 
 
