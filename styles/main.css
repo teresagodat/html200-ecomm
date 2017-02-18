@@ -93,8 +93,7 @@ section {
 section img {
     float: center;
     display: inline;
-    height: 10rem;
-    width: 10rem;
+ 
 }
 
 select {
