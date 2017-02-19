@@ -37,8 +37,10 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: stretch;
-    width: 90rem;
-    margin: 1rem;
+    width: 100rem;
+    margin-bottom: 4rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
     padding-left: 1rem;
     background-color: white;
   
@@ -46,9 +48,10 @@ footer {
 .flex-item   {
     border: .20rem solid #DBD5CA;
     align-items: stretch;
-    width: 15rem;
-    height: 20rem;
-    margin: 10px
+    width: 20rem;
+    height: 30rem;
+    margin: 10px;
+    padding: 2rem;
     
 }
 
@@ -147,11 +150,11 @@ select {
 h2 {
     flex:auto;
     color: #3D7FCF;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: 'Luckiest Guy', cursive;
     text-align: center;
     margin-top: 5rem;
-  
+    margin-right: 15rem;
 }
 .filter {
 	    width: 5%;
@@ -169,7 +172,7 @@ main {
       margin-right: 5rem;
       margin-left: 5rem;
       max-height: 100%;
-      width: 80%;
+      width: 75%;
       background-color: white;
 
 }
