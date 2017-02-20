@@ -1,6 +1,7 @@
 
 body {
     background-color: #C3CDDB;
+    max-width: 100%;
 }
 
 * {
@@ -27,10 +28,12 @@ footer {
 .item-container {
     display: -webkit-flex;
     display: flex;
+    display: flex;
     -webkit-justify-content: space-around;
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100;
     max-width:90%;
     max-height: 100%;
     margin-bottom: 5rem;
@@ -42,7 +45,7 @@ footer {
       display: flex;
       display: flex;
       float: left;
-      max-width: 9%;
+      max-width: 7%;
       height:100%;
       margin-top: 3rem;
       margin-left: 1rem;
@@ -52,8 +55,8 @@ footer {
     border: .20rem solid #DBD5CA;
     align-items: stretch;
     justify-content: center;
-    width: 22rem;
-    height: 35rem;
+    width: 23rem;
+    height: 36rem;
     margin: 10px;
     padding: 2rem;  
 }
@@ -62,6 +65,7 @@ footer {
     float: bottom;
     font-family: 'Luckiest Guy', cursive;
     text-align: center;
+    font-size: 1.5rem;
 }
 
 
@@ -80,6 +84,9 @@ footer {
   font-size: .9rem;
   text-align: center;
   vertical-align: bottom;
+  font-size: 1rem;
+  font-weight: bold;
+  
 }
 
 h2 {
@@ -91,6 +98,7 @@ h2 {
     margin-top: 5rem;
     padding-top: 4rem;
     letter-spacing: 1rem;
+    font-weight: bold;
 }
 
 header {
