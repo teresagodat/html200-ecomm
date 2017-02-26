@@ -2,15 +2,13 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  overflow-y: scroll;
 }
-
 
 body {
     background-color: #C3CDDB;
     max-width: 100%;
-    overflow-y: scroll;
-
-
+    max-height: auto;
 }
 
 * {
@@ -28,15 +26,16 @@ body {
 
 footer {
     clear: both;
+    max-width: 100%;
+    height: auto;
+    bottom: 0;
     background-color:  #C3CDDB;
     color: black;
     height: 15rem;
     text-align: center;
     overflow: hidden;
     font-family: 'Nunito Sans', sans-serif;
-
 }
-
 
 .filter {
       display: flex;
@@ -54,13 +53,12 @@ footer {
     align-items: stretch;
     justify-content: center;
     width: 25em;
-    height: 50rem;
+    height: 55rem;
     margin: 10px;
     padding: 2rem;  
 }
 
 .flex-item h3 {
-    float: bottom;
     font-family: 'BioRhyme Expanded', serif;
     text-align: center;
     font-size: 1.5rem;
@@ -131,7 +129,6 @@ header h1 {
     max-width:100%;
     max-height: 100%;
     margin-bottom: 5rem;
-    padding-bottom: -5rem;
     margin-left: 5rem;
     margin-right: 5rem;
     background-color: white;
@@ -163,8 +160,7 @@ nav {
     padding: 0;
     height: 4rem;
     max-height: auto;
-    max-width: 100%
-    
+    max-width: 100%   
 }
 
 nav a {
@@ -175,7 +171,6 @@ nav a {
     padding-left: 2rem;
     text-decoration: none;
     font-size: 2rem;
-
 }
   
 nav ul {
@@ -183,7 +178,8 @@ nav ul {
     margin: 0;
     padding: 0;
     width: 100%;
-  }
+}
+
 nav li{
     float: left;
 }
@@ -207,7 +203,6 @@ select {
     font-family: 'Kreon', serif;
     border: .1rem solid #DBD5CA;  
 }
-
 
 
 @media only screen and (max-width: 480px)  {
@@ -236,19 +231,13 @@ select {
   }
   h2 {
     font-family: 'Kreon', serif;
-    letter-spacing; .5rem;
+    letter-spacing: .5rem;
     text-align: center;
   }
 
     nav ul li {float: none;
   }
-  
- nav li {
-   
-    float: none;
-    width: 100%;
-  }
-  
+ 
   nav {
     height: 100%;
     max-width: 100;
@@ -257,7 +246,7 @@ select {
   nav-container a {
     text-align: center;
     border-bottom: solid .1rem white; 
-}
+  }
   .cart-info {
     float: none;
     text-align: center;
@@ -276,11 +265,18 @@ select {
   }
   
   .flex-item   {
-    width: 50rem;
+    width: 100rem;
     height: 60rem;
     margin: 10px; 
     
   }
+  .flex-item h3 {
+  font-size: 1.5rem;
+  }
+  .flex-item p {
+  font-size: 1rem;
+  }
+  
   footer {
     background-color: white;
   }
@@ -290,17 +286,5 @@ select {
     margin-top: 1rem;
   }
   
+}
 
-
-
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { ... }
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) { ... }
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { header h1 {
-    
-  } }
