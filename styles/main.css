@@ -9,7 +9,7 @@ body {
     background-color: #C3CDDB;
     max-width: 100%;
     overflow-y: scroll;
-    font-family: 'Kreon', serif;
+
 
 }
 
@@ -20,7 +20,7 @@ body {
 .button {
     background-color: aliceblue;
     color: black;
-    font-family: 'Kreon', serif;
+    font-family: 'Nunito Sans', sans-serif;
     width: 5rem;
     margin-top: .5rem;
     border-radius: .75rem;
@@ -33,6 +33,7 @@ footer {
     height: 15rem;
     text-align: center;
     overflow: hidden;
+    font-family: 'Nunito Sans', sans-serif;
 
 }
 
@@ -78,11 +79,11 @@ footer {
 }
 
 .flex-item p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: center;
   vertical-align: bottom;
   font-weight: bold;
-  font-family: 'Kreon', serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 h2 {
