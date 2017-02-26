@@ -1,3 +1,8 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 
 body {
     background-color: #C3CDDB;
@@ -9,54 +14,41 @@ body {
 }
 
 .button {
-    background-color: #DBD5CA;
+    background-color: aliceblue;
+    color: black;
     font-family: serif;
-    width: 3rem;
+    width: 5rem;
     margin-top: .5rem;
+    border-radius: .75rem;
 }
 
 footer {
     clear: both;
     background-color:  #C3CDDB;
     color: black;
-    height: 5rem;
-    padding: 1rem;
+    height: 15rem;
     text-align: center;
-    margin-bottom: -2rem;
+
 }
 
-.item-container {
-    display: -webkit-flex;
-    display: flex;
-    display: flex;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100;
-    max-width:90%;
-    max-height: 100%;
-    margin-bottom: 5rem;
-    padding-bottom: -5rem;
-    background-color: white;
-}
 
 .filter {
       display: flex;
       display: flex;
       float: left;
-      max-width: 7%;
+      max-width: 50%;
       height:100%;
-      margin-top: 3rem;
+      margin-top: 6rem;
       margin-left: 1rem;
+      padding-left: 2rem;
   }
 
 .flex-item   {
     border: .20rem solid #DBD5CA;
     align-items: stretch;
     justify-content: center;
-    width: 23rem;
-    height: 36rem;
+    width: 25em;
+    height: 50rem;
     margin: 10px;
     padding: 2rem;  
 }
@@ -92,7 +84,7 @@ footer {
 h2 {
     flex:auto;
     color: #3D7FCF;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: 'Luckiest Guy', cursive;
     text-align: center;
     margin-top: 5rem;
@@ -103,24 +95,46 @@ h2 {
 
 header {
     clear:both;
+    max-height: 20%;
+    height: 14rem;
 }
 
 header img  {
     float: left;
     height: 10rem;
     padding: .5rem;
+    padding-left: 1rem;
+    max-height: 80%;
 }
 
 header h1 {
-    position: relative;
     bottom: auto;
     color: #3D7FCF;
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: 'Luckiest Guy', cursive;
     margin-top: 1rem;
     margin-left: 5rem;
     line-height: 2rem; 
+    max-width: 100%;
 }
+
+.item-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100;
+    max-width:100%;
+    max-height: 100%;
+    margin-bottom: 5rem;
+    padding-bottom: -5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    background-color: white;
+}
+
 
 main {
       display: flex;
@@ -137,34 +151,153 @@ main {
     justify-content: space-between;
     flex-flow: wrap;
     width: 100%;
-    height: 2rem;
+    height: 3rem;
 }
 
 nav {
     background-color:#3D7FCF;
-    text-align: center;
-    padding-bottom: 1rem;
-    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 4rem;
+    max-height: auto;
+    max-width: 100%
+    
 }
 
 nav a {
+    display: block;
     color: white;
+    text-align: center;
+    padding: 1rem;
+    padding-left: 2rem;
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+  
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+nav li{
+    float: left;
 }
 
-nav ul{
-    list-style: none;
-    margin: 0.5rem;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
+nav li a:hover:not(.active) {background-color: #DBD5CA;}
+
+nav li a.active {background-color: #4CAF50;}
+
+.cart-info {
+  float: right;
+  padding-right: 2rem;
+  font-size: 3rem;
 }
 
 select {
-    width: 100%;
+    max-width: 100%;
     border: none;
-    width: 8rem;
-    margin-top: .5rem;
+    width: 12rem;
+    margin-top: 25rem;
     background-color: aliceblue;
     font-family: serif;
     border: .1rem solid #DBD5CA;  
 }
+
+
+
+@media only screen and (max-width: 480px)  {
+  
+  html, body {
+  margin: 0;
+  padding: 0;
+}
+  
+  .button {
+    background-color: aliceblue;
+    color: black;
+    font-family: serif;
+    width: 20rem;
+    margin-top: .5rem;
+    border-radius: .75rem;
+  }
+    
+  header {
+     height: 18rem;
+      max-width: 100%;
+  }
+
+  header h1, header img {
+    margin-top: 2rem;
+  }
+  h1, h2 {
+    font-size: .25rem;
+    text-align: center;
+  }
+
+    nav ul li {float: none;
+  }
+  
+ nav li {
+   
+    float: none;
+    width: 100%;
+  }
+  
+  nav {
+    height: 100%;
+    max-width: 100;
+  }
+ 
+  nav-container a {
+    text-align: center;
+    border-bottom: solid .1rem white; 
+}
+  .cart-info {
+    float: none;
+    text-align: center;
+    font-size: 2rem;
+    padding-left: 2rem;
+  }
+  
+  main {
+    background-color: white;
+  }
+  
+  .filter {
+    width: 100%;
+    text-align: center;
+    padding-top: 5rem;
+  }
+  
+  .flex-item   {
+    width: 50rem;
+    height: 60rem;
+    margin: 10px; 
+    
+  }
+  footer {
+    background-color: white;
+  }
+  
+  .select {
+    width: 20rem;
+    margin-top: 1rem;
+  }
+  
+
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { header h1 {
+    
+  } }

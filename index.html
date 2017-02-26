@@ -8,13 +8,14 @@
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link href="styles/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet"> 
 </head>
 <body>
   <header>
-    <div class="nav-container">
       <nav>
+      <div class="nav-container">
         <ul>
           <li><a href="#">Hats</a></li>
           <li><a href="#">Gloves</a></li>
@@ -25,20 +26,22 @@
         </ul>
       </nav>
     </div>
-    <img srcset="images/logo-scarfcat-xlg.png 1200w, images/logo-scarfcat-lg.png 800w, images/logo-scarfcat-sm.png 400w" 
-          sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+    <img srcset="images/logo-scarfcat-xlg.png 100w, images/logo-scarfcat-lg.png 50w, images/logo-scarfcat-sm.png 25w" 
+          sizes="(max-width: 800px) 25px, (max-width: 1600px) 50px, (min-width: 1601px) 100px"
           src="images/logo-scarfcat-lg.png" 
           alt="scarfcat logo">
     <h1>Winter Wear<span></span> Warehouse</h1>
   </header>
   <main>
     <section>
+      <div class="row"> 
+        <div class=".col-xs-12 .col-sm-4 .col-md-4 .col-lg-2"> 
       <div class="section group">
       </div>
       <div class="filter"> 
       <form name="filter" onsubmit="selValue();">
         <label>Filter By:
-          <select id="selection">
+          <select class="select" id="selection">
             <option value="">Choose One</option>
             <option value="price">Price</option>
             <option value="name">Name</option>
@@ -47,12 +50,14 @@
         <input class="button" type="submit" value="Sort">
       </form>
       </div>
+          <div class="row"></div>
+        <div class=".col-xs-12 .col-sm-8 .col-md-8 .col-lg-10">
    <h2>Scarves</h2>
       <div class="item-container">
         <div class="flex-item">
           <h3>Reversible Plaid</h3>
-              <img srcset="images/reversible-plaid-xlg.jpg 1200w, images/reversible-plaid-lg.jpg 800w, images/reversible-plaid-sm.jpg 400w" 
-                   sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              <img srcset="images/reversible-plaid-xlg.jpg 320w, images/reversible-plaid-lg.jpg 240w, images/reversible-plaid-sm.jpg 160w" 
+                   sizes="(max-width: 800px) 160px, (max-width: 1600px) 240px, (min-width: 1601px) 320px"
                     src="images/reversible-plaid-lg.jpg"
                     alt="reversible plaid scarf">
           <p>
@@ -65,8 +70,8 @@
           </div>
           <div class="flex-item">
           <h3>Wool Cable Knit</h3>
-              <img srcset="images/wool-cable-xlg.jpeg 1200w, images/wool-cable-lg.jpeg 800w, images/wool-cable.jpeg 400w"  
-                    sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              <img srcset="images/wool-cable-xlg.jpeg 320w, images/wool-cable-lg.jpeg 240w, images/wool-cable.jpeg 160w"  
+                    sizes="(max-width: 800px) 160px, (max-width: 1600px) 240px, (min-width: 1601px) 320px"
                     src="images/wool-cable-lg.jpeg"
                     alt="wool-cable scarf">
           <p>
@@ -79,8 +84,8 @@
           </div>
           <div class="flex-item">
           <h3>Northern Lights</h3>
-              <img srcset="images/northern-lights-xlg.jpg 1200w, images/northern-lights-lg.jpg 800w, images/northern-lights.jpg 400w"  
-                    sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              <img srcset="images/northern-lights-xlg.jpg 320w, images/northern-lights-lg.jpg 240w, images/northern-lights.jpg 160w"  
+                    sizes="(max-width: 800px) 160px, (max-width: 1600px) 240px, (min-width: 1601px) 320px"
                     src="images/northern-lights-lg.jpg"
                     alt="northern-lights scarf">
           <p>
@@ -94,8 +99,8 @@
           
           <div class="flex-item">
           <h3>Ombre Infinity</h3>
-              <img srcset="images/ombre-infinity-xlg.jpg 1200w, images/ombre-infinity-lg.jpg 800w, images/ombre-infinity.jpg 400w"  
-                    sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              <img srcset="images/ombre-infinity-xlg.jpg 320w, images/ombre-infinity-lg.jpg 240w, images/ombre-infinity.jpg 160w"  
+                    sizes="(max-width: 800px) 160px, (max-width: 1600px) 240px, (min-width: 1601px) 320px"
                     src="images/ombre-infinity-lg.jpg"
                     alt="ombre-infinity scarf">
           <p>
@@ -108,8 +113,8 @@
           </div>
           <div class="flex-item">
           <h3>Fringed Plaid</h3>
-              <img srcset="images/fringed-plaid-xlg.jpeg 1200w, images/fringed-plaid-lg.jpeg 800w, images/fringed-plaid-sm.jpeg 400w" 
-                    sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              <img srcset="images/fringed-plaid-xlg.jpeg 320w, images/fringed-plaid-lg.jpeg 240w, images/fringed-plaid-sm.jpeg 160w" 
+                    sizes="(max-width: 800px) 160px, (max-width: 1600px) 240px, (min-width: 1601px) 320px"
                     src="images/fringed-plaid-lg.jpeg"
                     alt="fringed plaid scarf">
           <p>
@@ -122,8 +127,8 @@
           </div>    
           <div class="flex-item">
           <h3>Multi Color</h3>
-              <img srcset="images/multi-color-xlg.jpeg 1200w, images/multi-color-lg.jpeg 800w, images/multi-color-sm.jpeg 400w"  
-                   sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              <img srcset="images/multi-color-xlg.jpeg 320w, images/multi-color-lg.jpeg 240w, images/multi-color-sm.jpeg 160w"  
+                   sizes="(max-width: 800px) 160px, (max-width: 1600px) 240px, (min-width: 1601px) 320px"
                     src="images/multi-color-lg.jpeg"
                     alt="multi-color scarf">
           <p>
@@ -136,8 +141,8 @@
           </div> 
           <div class="flex-item">
           <h3>Etro Paisley-Print Silk</h3>
-             <img srcset="images/etro-xlg.png 1200w, images/etro-lg.png 800w, images/etro-sm.png 400w"  
-                    sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+             <img srcset="images/etro-xlg.png 320w, images/etro-lg.png 240w, images/etro-sm.png 160w"  
+                    sizes="(max-width: 800px) 160px, (max-width: 1600px) 240px, (min-width: 1601px) 320px"
                     src="images/etro-lg.png"
                     alt="reversible plaid scarf">
           <p>
@@ -150,8 +155,8 @@
           </div> 
           <div class="flex-item">
           <h3>Ashby Twill</h3>
-              <img srcset="images/twill-xlg.jpg 1200w, images/twill-lg.jpg 800w, images/twill-sm.jpg 400w"  
-                    sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              <img srcset="images/twill-xlg.jpg 320w, images/twill-lg.jpg 240, images/twill-sm.jpg 160w"  
+                    sizes="(max-width: 800px) 160px, (max-width: 1600px) 240px, (min-width: 1601px) 320px"
                     src="images/twill-lg.jpg"
                     alt="twill scarf">
           <p>
@@ -164,6 +169,8 @@
           </p>
           </div>
         </div>
+          </div>
+      </div>
     <script type="text/javascript" src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    </section>
@@ -177,5 +184,9 @@
           </address>
               copyright 2017 Winter Wear Warehouse, LLC
   </footer>
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
