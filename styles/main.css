@@ -1,12 +1,16 @@
 html, body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 
 body {
     background-color: #C3CDDB;
     max-width: 100%;
+    overflow-y: scroll;
+    font-family: 'Kreon', serif;
+
 }
 
 * {
@@ -16,7 +20,7 @@ body {
 .button {
     background-color: aliceblue;
     color: black;
-    font-family: serif;
+    font-family: 'Kreon', serif;
     width: 5rem;
     margin-top: .5rem;
     border-radius: .75rem;
@@ -28,6 +32,7 @@ footer {
     color: black;
     height: 15rem;
     text-align: center;
+    overflow: hidden;
 
 }
 
@@ -55,7 +60,7 @@ footer {
 
 .flex-item h3 {
     float: bottom;
-    font-family: 'Luckiest Guy', cursive;
+    font-family: 'BioRhyme Expanded', serif;
     text-align: center;
     font-size: 1.5rem;
 }
@@ -73,24 +78,20 @@ footer {
 }
 
 .flex-item p {
-  font-size: .9rem;
+  font-size: 1rem;
   text-align: center;
   vertical-align: bottom;
-  font-size: 1rem;
   font-weight: bold;
-  
+  font-family: 'Kreon', serif;
 }
 
 h2 {
-    flex:auto;
-    color: #3D7FCF;
-    font-size: 1.5rem;
-    font-family: 'Luckiest Guy', cursive;
     text-align: center;
     margin-top: 5rem;
     padding-top: 4rem;
-    letter-spacing: 1rem;
-    font-weight: bold;
+    padding-left: 1rem;
+    letter-spacing: 2.5rem;
+    
 }
 
 header {
@@ -110,8 +111,8 @@ header img  {
 header h1 {
     bottom: auto;
     color: #3D7FCF;
-    font-size: 3rem;
-    font-family: 'Luckiest Guy', cursive;
+    font-size: 2rem;
+    font-family: 'BioRhyme Expanded', serif;
     margin-top: 1rem;
     margin-left: 5rem;
     line-height: 2rem; 
@@ -202,7 +203,7 @@ select {
     width: 12rem;
     margin-top: 25rem;
     background-color: aliceblue;
-    font-family: serif;
+    font-family: 'Kreon', serif;
     border: .1rem solid #DBD5CA;  
 }
 
@@ -232,8 +233,9 @@ select {
   header h1, header img {
     margin-top: 2rem;
   }
-  h1, h2 {
-    font-size: .25rem;
+  h2 {
+    font-family: 'Kreon', serif;
+    letter-spacing; .5rem;
     text-align: center;
   }
 
