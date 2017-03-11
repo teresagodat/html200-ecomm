@@ -1,3 +1,4 @@
+
 html, body {
   margin: 0;
   padding: 0;
@@ -37,6 +38,7 @@ footer {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+
 .filter {
       display: flex;
       display: flex;
@@ -48,15 +50,18 @@ footer {
       padding-left: 2rem;
   }
 
+
 .flex-item   {
     border: .20rem solid #DBD5CA;
     align-items: stretch;
     justify-content: center;
     width: 25em;
-    height: 55rem;
+    height: 75rem;
     margin: 10px;
     padding: 2rem;  
 }
+
+
 
 .flex-item h3 {
     font-family: 'BioRhyme Expanded', serif;
@@ -65,16 +70,21 @@ footer {
 }
 
 
+
+
+
 .flex-item img {
     float: center;
     display: flex;
     height: 60%;
-    width: 80;
+    width: 80%;
     max-height: 100%;
     max-width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+
 
 .flex-item p {
   font-size: 1.2rem;
@@ -84,20 +94,24 @@ footer {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+
 h2 {
     text-align: center;
     margin-top: 5rem;
     padding-top: 4rem;
     padding-left: 1rem;
     letter-spacing: 2.5rem;
-    
 }
+
+
 
 header {
     clear:both;
     max-height: 20%;
     height: 14rem;
 }
+
+
 
 header img  {
     float: left;
@@ -106,6 +120,8 @@ header img  {
     padding-left: 1rem;
     max-height: 80%;
 }
+
+
 
 header h1 {
     bottom: auto;
@@ -133,7 +149,6 @@ header h1 {
     margin-right: 5rem;
     background-color: white;
 }
-
 
 main {
       display: flex;
@@ -172,7 +187,8 @@ nav a {
     text-decoration: none;
     font-size: 2rem;
 }
-  
+
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -204,15 +220,43 @@ select {
     border: .1rem solid #DBD5CA;  
 }
 
+.qtyminus {
+    margin-top: -2rem;
+    bottom: 0;
+    float: right;
+    right: 2rem;
+    margin-bottom: 1rem;
+    width: 3rem;  
+}
+
+.qty {
+    margin-top: -2rem;
+    bottom: 0;
+    float: right;
+    right: 4rem;
+    margin-bottom: 1rem;
+    width: 3rem;
+}
+.qtyplus {
+     margin-top: -2rem;
+    bottom: 0;
+    float: right;
+    right: 7rem;
+    right: 7rem;
+    margin-bottom: 1rem;
+    width: 2.5rem;
+}
+
 
 @media only screen and (max-width: 480px)  {
-  
-  html, body {
-  margin: 0;
-  padding: 0;
+
+html, body {
+    margin: 0;
+    padding: 0;
 }
+
   
-  .button {
+.button {
     background-color: aliceblue;
     color: black;
     font-family: serif;
@@ -220,71 +264,106 @@ select {
     margin-top: .5rem;
     border-radius: .75rem;
   }
-    
-  header {
-     height: 18rem;
-      max-width: 100%;
+
+header {
+    height: 18rem;
+    max-width: 100%;
   }
 
-  header h1, header img {
+header h1, header img {
     margin-top: 2rem;
   }
-  h2 {
+
+h2 {
     font-family: 'Kreon', serif;
     letter-spacing: .5rem;
     text-align: center;
   }
 
-    nav ul li {float: none;
+
+nav ul li {
+    float: none;
   }
- 
-  nav {
+
+
+nav {
     height: 100%;
     max-width: 100;
   }
+
  
-  nav-container a {
+nav-container a {
     text-align: center;
     border-bottom: solid .1rem white; 
   }
+
   .cart-info {
     float: none;
     text-align: center;
     font-size: 2rem;
     padding-left: 2rem;
   }
+
   
-  main {
+main {
     background-color: white;
   }
+
   
-  .filter {
+.filter {
     width: 100%;
     text-align: center;
     padding-top: 5rem;
   }
+
   
-  .flex-item   {
+
+.flex-item   {
     width: 100rem;
     height: 60rem;
     margin: 10px; 
-    
   }
-  .flex-item h3 {
+
+.flex-item h3 {
   font-size: 1.5rem;
   }
-  .flex-item p {
+
+.flex-item p {
   font-size: 1rem;
   }
+
   
-  footer {
+
+footer {
     background-color: white;
   }
-  
-  .select {
+
+.select {
     width: 20rem;
     margin-top: 1rem;
   }
+
+.qtyminus {
+    float: right;
+    bottom: 0;
+    margin-bottom: 1rem;
+    margin-top: -2rem;
+    
+ }
   
+.qty {
+    margin-top: -2rem;
+    float: right;
+    bottom: 0;
+    margin-bottom: 1rem;
+    width: 3rem;
+}
+  
+.qtyplus {
+     margin-top: -2rem;
+    float: right;
+    bottom: 0;
+    margin-bottom: 1rem;
+ }
 }
 

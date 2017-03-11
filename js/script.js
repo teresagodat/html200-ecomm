@@ -49,10 +49,14 @@ var products = [
   }
  ]
 
- 
-for(var key in products) { 
-console.log(key); 
-console.log(products[key]);
+for (var i = 0; i < products.length; i++) {
+
+  console.log("name: " + products[i].name);
+
+  console.log("description: " + products[i].description);
+
+  console.log("price: " + products[i].price);
+
 }
 
 function selValue(){
@@ -60,22 +64,75 @@ function selValue(){
     event.preventDefault();
 }
 
-////function for sum cart total 
+/*loops through the product array and adds the prices together*/
+
+function sumPrices(cartArray) {
+  var sum = 0;
+  for (var i = 0; i < cartArray.length; i++) {
+    sum = sum + cartArray[i].price;
+  }
+  console.log(sum);
+}
+
+/*calls the sumPrices function with the products array*/
+
+sumPrices(products);
+
+//Define a global variable in JS, array “cart”.\
 //
-//var arr = ["one", "two"]
-//
-////TODO: trigger on change of cart contents
-//function sumPrices(cartArray) {
-//  // for loop through array, sum value of price attribute for each object
-//    var total = 0;
-//  
-//    for(var i=0; i<cartArray.length; i++) {
-//    
-//      if(cartArray[i].price) {
-//        total = total + cartArray[i].price;
-//      }
-//  }
-//  
-//  //TODO: print total as HTML to page, next to cart icon
-//  console.log(total);
-//}
+var cart = [{name: "Reversible Plaid"}, {name: "Wool Cable Knit"}, {name: "Northern Lights"}, {name: "Ombre Infinity"}, {name: "Fringed Plaid"}, {name: "Multi Color"}, {name: "Etro Paisley-Print Silk"}, {name: "Ashby Twill"}];
+
+
+//////////////////////////////////////
+
+/*add item to cart*/
+
+function addItem(item) {
+  var index = cart.indexOf(item);
+  if (index == -1) {
+    cart.push(item);
+  }
+  console.log(cart);
+}
+
+
+// remove item from cart //
+
+function remove(item) {
+  var index = cart.indexOf(item);
+  if (index != -1) {
+    cart.splice(index, 1);
+  }
+  console.log(cart);
+}
+  
+
+////////////////////////////////////
+  
+// Sort products by Name //
+
+
+products.sort(function (a,b) {
+  var nameA = a.name.toLowerCase();
+  var nameB = b.name.toLowerCase();
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+  return 0;
+});
+console.log(products);
+
+
+  ///////////////////////////////////
+  
+// Sort products by Price //
+  
+products.sort(function (a,b) {
+  return a.price - b.price;
+  return 0;
+});
+console.log(products);
+
