@@ -274,10 +274,15 @@ header h1, header img {
     margin-top: 2rem;
   }
 
+header h1 {
+    font-size: 1.5rem;
+  }
+
 h2 {
     font-family: 'Kreon', serif;
     letter-spacing: .5rem;
     text-align: center;
+    font-size: .5rem;
   }
 
 
@@ -312,8 +317,9 @@ main {
   
 .filter {
     width: 100%;
-    text-align: center;
+    text-align: left;
     padding-top: 5rem;
+    margin-left: -5rem;
   }
 
   
@@ -331,7 +337,11 @@ main {
 .flex-item p {
   font-size: 1rem;
   }
+.flex-item img {
 
+    height: 20%;
+
+  }
   
 
 footer {
@@ -344,24 +354,24 @@ footer {
   }
 
 .qtyminus {
-    float: right;
+    float: left;
     bottom: 0;
     margin-bottom: 1rem;
-    margin-top: -2rem;
+    margin-top: 1rem;
     
  }
   
 .qty {
-    margin-top: -2rem;
-    float: right;
+    margin-top: 1rem;
+    float: left;
     bottom: 0;
     margin-bottom: 1rem;
     width: 3rem;
 }
   
 .qtyplus {
-     margin-top: -2rem;
-    float: right;
+    margin-top: 1rem;
+    float: left;
     bottom: 0;
     margin-bottom: 1rem;
  }
