@@ -52,11 +52,8 @@ var products = [
 for (var i = 0; i < products.length; i++) {
 
   console.log("name: " + products[i].name);
-
   console.log("description: " + products[i].description);
-
   console.log("price: " + products[i].price);
-
 }
 
 function selValue(){
@@ -78,35 +75,149 @@ function sumPrices(cartArray) {
 
 sumPrices(products);
 
+
+/////////////////////////////////////////////////////////
+
+// J Query //
+
+    $(".add-to-cart").click(function(event){
+          event.preventDefault();
+          var name = $(this).attr("name");
+          var price = Number($(this).attr("price"));
+        
+          addItemToCart(name, price, 1);
+          displayCart();
+      });
+      
+  
+      $("#clear-cart").click(function(event){
+          clearCart();
+          displayCart();
+      });
+      
+      function displayCart(){
+        
+        $("#count-cart").html( countCart() );
+//        $("#total-cart").html( totalCart() );
+      }
+    
+
+      $(".remove-items").click(function(event){
+          event.preventDefault();
+          var name = $(this).attr("name");
+          var price = Number($(this).attr("data-price"));
+        
+          removeItemFromCart(name, price, 1);
+          displayCart();
+      });
+ 
+      //**********************************
+      //shopping cart functions
+
+
+
 //Define a global variable in JS, array “cart”.\
 //
 var cart = [{name: "Reversible Plaid"}, {name: "Wool Cable Knit"}, {name: "Northern Lights"}, {name: "Ombre Infinity"}, {name: "Fringed Plaid"}, {name: "Multi Color"}, {name: "Etro Paisley-Print Silk"}, {name: "Ashby Twill"}];
 
 
-//////////////////////////////////////
+
+
+
+var Item = function(name, price, count) {
+    this.name = name  
+    this.price = price
+    this.count = count
+  
+};
 
 /*add item to cart*/
 
-function addItem(item) {
-  var index = cart.indexOf(item);
-  if (index == -1) {
-    cart.push(item);
-  }
-  console.log(cart);
-}
+        
+        function addItemToCart(name, price, count) {
+            for (var i in cart) {
+               if (cart[i].name === name) {
+                  cart[i].count += count;
+                  saveCart();
+                  return;
+               }
+            }
+            var item = new Item(name, price, count);
+            cart.push(item);
+            saveCart();
+      }
 
+      
+      
+        function removeItemFromCart(name, price, count) { // Removes one item
+            for (var i in cart) {
+                if (cart[i].name === name) { 
+                    cart[i].count --;
+                    if (cart[i].count === 0) {
+                        cart.splice(i, 1)
+                    }
+                    break;
+                }
+            }
+            saveCart();
+        }
 
-// remove item from cart //
+      
+//        function removeItemFromCartAll(name) {
+//          // removes all item name
+//              for (var i in cart) {
+//                  if (cart[i].name === name) {
+//                      cart.splice(i, 1);
+//                      break;
+//                  }
+//              }
+//              saveCart();
+//        }
 
-function remove(item) {
-  var index = cart.indexOf(item);
-  if (index != -1) {
-    cart.splice(index, 1);
-  }
-  console.log(cart);
-}
+        
+        function clearCart() {
+              cart = [];
+              saveCart();
+        }
+       
+        function countCart() {//-> return total count
+              var totalCount = 0;  
+              for (var i in this.cart) {
+                  totalCount += this.cart[i].count;  
+              }
+              
+              return totalCount;
+        }
+        
+        console.log( countCart());
+      
+//        function totalCart() {//-> return total cost
+//              var totalCost = 0;
+//              for (var i in this.cart) {
+//                  totalCost += this.cart[i].price * this.cart[i].count;
+//              }
+//              return totalCost.toFixed(2);
+//          
+//        }
+//      
+//        console.log( totalCart());
+//      
+
+       
+        function saveCart() {
+            localStorage.setItem("shoppingCart", JSON.stringify(cart));
+        }
+      
+        
+        function loadCart() {
+            cart = JSON.parse( localStorage.getItem("shoppingCart"));
+        }
+        
+        loadCart();
+        displayCart();
+
   
-
+  
 ////////////////////////////////////
   
 // Sort products by Name //
@@ -135,4 +246,3 @@ products.sort(function (a,b) {
   return 0;
 });
 console.log(products);
-

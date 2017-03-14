@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="styles/main.css">
     <link href="styles/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded&amp;Nunito+Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded&amp;Nunito+Sans" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
   <header>
@@ -21,9 +22,12 @@
           <li><a href="#">Gloves</a></li>
           <li><a href="#">Scarves</a></li>
           <li class="cart-info">
-             <i onclick="showCart" class="fa fa-shopping-cart" aria-hidden="true"></i>
+             <i class="fa fa-shopping-cart" aria-hidden="true"> (<span id="count-cart">X</span>)</i>
+               <button id="clear-cart">Clear Cart</button>
           </li>
         </ul>
+     
+        
       </div>
       </nav>
     <img srcset="images/logo-scarfcat-xlg.png 100w, images/logo-scarfcat-lg.png 50w, images/logo-scarfcat-sm.png 25w" 
@@ -67,15 +71,11 @@
           <p>
               26.99
           </p>
-          <button type="submit" id="addToCartButton1" class="add-to-cart-btn" onclick="clicker('yes')">
+          <button type="submit" class="add-to-cart" onclick="addItemToCart">
           <i class="fa fa-shopping-cart" aria-hidden="true">
           </i> Add to Cart</button>
-          <form id='quantityform1' method='POST' action='#'>
-              <input type='button' value='-' class='qtyminus' name='quantity'>
-              <input type='text' name='quantity' value='1' class='qty'>
-              <input type='button' value='+' class='qtyplus' onclick="cartHandler('Reversible Plaid')" name='quantity'>
-          </form>
-          </div>
+          <button class="remove-all-items" onclick="removeItemFromCart">Remove from Cart</button>
+            </div>
           <div class="flex-item">
           <h3>Wool Cable Knit</h3>
               <img srcset="images/wool-cable-xlg.jpeg 320w, images/wool-cable-lg.jpeg 240w, images/wool-cable.jpeg 160w"  
@@ -89,17 +89,11 @@
           <p>
               49.99
           </p>
-          <button type="submit" id="addToCartButton2" class="add-to-cart-btn" onclick="clicker('yes')">
-            <i class="fa fa-shopping-cart" aria-hidden="true">
-            </i>
-            Add to Cart
-          </button>
-        <form id='quantityform2' method='POST' action='#'>
-            <input type='button' value='-' class='qtyminus' name='quantity'>
-            <input type='text' name='quantity' value='1' class='qty'>
-            <input type='button' value='+' class='qtyplus' onclick="cartHandler('Wool Cable Knit')" name='quantity'>
-          </form>
-          </div>
+          <button type="submit" class="add-to-cart" onclick="addItemToCart">
+          <i class="fa fa-shopping-cart" aria-hidden="true">
+          </i> Add to Cart</button>
+          <button class="remove-all-items" onclick="removeItemFromCart">Remove from Cart</button>
+            </div>
           <div class="flex-item">
           <h3>Northern Lights</h3>
               <img srcset="images/northern-lights-xlg.jpg 320w, images/northern-lights-lg.jpg 240w, images/northern-lights.jpg 160w"  
@@ -113,15 +107,11 @@
           <p>
               29.99
           </p>
-      <button type="submit" id="addToCartButton3" class="add-to-cart-btn" onclick="clicker('yes')">
+      <button type="submit" class="add-to-cart" onclick="addItemToCart">
           <i class="fa fa-shopping-cart" aria-hidden="true">
-        </i> Add to Cart</button>
-        <form id='quantityform3' method='POST' action='#'>
-            <input type='button' value='-' class='qtyminus' name='quantity'>
-            <input type='text' name='quantity' value='1' class='qty'>
-            <input type='button' value='+' class='qtyplus' onclick="cartHandler('Northern Lights')" name='quantity'>
-          </form>
-          </div>
+          </i> Add to Cart</button>
+          <button class="remove-all-items" onclick="removeItemFromCart">Remove from Cart</button>
+            </div>
           <div class="flex-item">
           <h3>Ombre Infinity</h3>
               <img srcset="images/ombre-infinity-xlg.jpg 320w, images/ombre-infinity-lg.jpg 240w, images/ombre-infinity.jpg 160w"  
@@ -135,15 +125,11 @@
           <p>
               11.99
           </p>
-      <button type="submit" id="addToCartButton4" class="add-to-cart-btn" onclick="clicker('yes')">
+      <button type="submit" class="add-to-cart" onclick="addItemToCart">
           <i class="fa fa-shopping-cart" aria-hidden="true">
-          </i>Add to Cart</button>
-          <form id='quantityform4' method='POST' action='#'>
-            <input type='button' value='-' class='qtyminus' name='quantity'>
-            <input type='text' name='quantity' value='1' class='qty'>
-            <input type='button' value='+' class='qtyplus' onclick="cartHandler('Ombre Infinity')" name='quantity'>
-          </form>
-          </div>
+          </i> Add to Cart</button>
+          <button class="remove-all-items" onclick="removeItemFromCart">Remove from Cart</button>
+            </div>
           <div class="flex-item">
           <h3>Fringed Plaid</h3>
               <img srcset="images/fringed-plaid-xlg.jpeg 320w, images/fringed-plaid-lg.jpeg 240w, images/fringed-plaid-sm.jpeg 160w" 
@@ -157,15 +143,11 @@
           <p>
               18.99
           </p>
-      <button type="submit" id="addToCartButton5" class="add-to-cart-btn" onclick="clicker('yes')">
+      <button type="submit" class="add-to-cart" onclick="addItemToCart">
           <i class="fa fa-shopping-cart" aria-hidden="true">
-            </i>Add to Cart</button>
-          <form id='quantityform5' method='POST' action='#'>
-            <input type='button' value='-' class='qtyminus' name='quantity'>
-            <input type='text' name='quantity' value='1' class='qty'>
-            <input type='button' value='+' class='qtyplus' onclick="cartHandler('Fringed Plaid')" name='quantity'>
-          </form>
-          </div>    
+          </i> Add to Cart</button>
+          <button class="remove-all-items" onclick="removeItemFromCart">Remove from Cart</button>
+            </div>
           <div class="flex-item">
           <h3>Multi Color</h3>
               <img srcset="images/multi-color-xlg.jpeg 320w, images/multi-color-lg.jpeg 240w, images/multi-color-sm.jpeg 160w"  
@@ -179,15 +161,11 @@
           <p>
               22.99
           </p>
-    <button type="submit" id="addToCartButton6" class="add-to-cart-btn" onclick="clicker('yes')">
+    <button type="submit" class="add-to-cart" onclick="addItemToCart">
           <i class="fa fa-shopping-cart" aria-hidden="true">
-          </i>Add to Cart</button>
-        <form id='quantityform6' method='POST' action='#'>
-            <input type='button' value='-' class='qtyminus' name='quantity'>
-            <input type='text' name='quantity' value='1' class='qty'>
-            <input type='button' value='+' class='qtyplus' onclick="cartHandler('Multi Color')" name='quantity'>
-          </form>
-          </div> 
+          </i> Add to Cart</button>
+          <button class="remove-all-items" onclick="removeItemFromCart">Remove from Cart</button>
+            </div>
           <div class="flex-item">
           <h3>Etro Paisley-Print Silk</h3>
              <img srcset="images/etro-xlg.png 320w, images/etro-lg.png 240w, images/etro-sm.png 160w"  
@@ -201,15 +179,11 @@
           <p>
               249.99
           </p>
-      <button type="submit" id="addToCartButton7" class="add-to-cart-btn" onclick="clicker('yes')">
+      <button type="submit" class="add-to-cart" onclick="addItemToCart">
           <i class="fa fa-shopping-cart" aria-hidden="true">
-          </i>Add to Cart</button>
-        <form id='quantityform7' method='POST' action='#'>
-            <input type='button' value='-' class='qtyminus' name='quantity'>
-            <input type='text' name='quantity' value='1' class='qty'>
-            <input type='button' value='+' class='qtyplus' onclick="cartHandler('Etro Paisley-Print Silk')" name='quantity'>
-          </form>
-          </div> 
+          </i> Add to Cart</button>
+          <button class="remove-all-items" onclick="removeItemFromCart">Remove from Cart</button>
+            </div>
           <div class="flex-item">
           <h3>Ashby Twill</h3>
               <img srcset="images/twill-xlg.jpg 320w, images/twill-lg.jpg 240w, images/twill-sm.jpg 160w"  
@@ -224,18 +198,14 @@
           <p>
               70.99
           </p>
-      <button type="submit" id="addToCartButton8" class="add-to-cart-btn" onclick="clicker('yes')">
+      <button type="submit" class="add-to-cart" onclick="addItemToCart">
           <i class="fa fa-shopping-cart" aria-hidden="true">
-          </i>Add to Cart</button>
-        <form id='quantityform8' method='POST' action='#'>
-            <input type='button' value='-' class='qtyminus' name='quantity'>
-            <input type='text' name='quantity' value='1' class='qty'>
-            <input type='button' value='+' class='qtyplus' onclick="cartHandler('Ashby Twill')" name='quantity'>
-          </form>
+          </i> Add to Cart</button>
+          <button class="remove-all-items" onclick="removeItemFromCart">Remove from Cart</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
    </section>
    </main>

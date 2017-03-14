@@ -25,6 +25,28 @@ body {
     border-radius: .75rem;
 }
 
+.cart-info {
+  float: right;
+  padding-right: 4rem;
+  font-size: 3rem;
+  color: white;
+}
+
+#clear-cart {
+    float: center;
+    background-color: aliceblue;
+    color: black;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-top: .5rem;
+    border-radius: .75rem;
+    font-size: 1.5rem;
+}
+
+#count-cart {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 2rem;
+}
+
 footer {
     clear: both;
     max-width: 100%;
@@ -55,8 +77,8 @@ footer {
     border: .20rem solid #DBD5CA;
     align-items: stretch;
     justify-content: center;
-    width: 25em;
-    height: 75rem;
+    width: 30em;
+    height: 50rem;
     margin: 10px;
     padding: 2rem;  
 }
@@ -76,8 +98,8 @@ footer {
 .flex-item img {
     float: center;
     display: flex;
-    height: 60%;
-    width: 80%;
+    height: 40%;
+    width: 60%;
     max-height: 100%;
     max-width: 100%;
     margin-top: 1rem;
@@ -173,7 +195,7 @@ nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    height: 4rem;
+    height: 5rem;
     max-height: auto;
     max-width: 100%   
 }
@@ -204,11 +226,7 @@ nav li a:hover:not(.active) {background-color: #DBD5CA;}
 
 nav li a.active {background-color: #4CAF50;}
 
-.cart-info {
-  float: right;
-  padding-right: 2rem;
-  font-size: 3rem;
-}
+
 
 select {
     max-width: 100%;
@@ -220,33 +238,28 @@ select {
     border: .1rem solid #DBD5CA;  
 }
 
-.qtyminus {
-    margin-top: -2rem;
+.add-to-cart {
+  background-color: aliceblue;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-top: 4rem;
     bottom: 0;
-    float: right;
+    float: left;
     right: 2rem;
-    margin-bottom: 1rem;
-    width: 3rem;  
+    width: 11rem;  
+    border-radius: .75rem;
 }
 
-.qty {
-    margin-top: -2rem;
+.remove-all-items {
+    background-color: aliceblue;
+    font-family: 'Nunito Sans', sans-serif;  
+    margin-top: 4rem;
     bottom: 0;
     float: right;
     right: 4rem;
     margin-bottom: 1rem;
-    width: 3rem;
+    width: 15rem;
+    border-radius: .75rem;
 }
-.qtyplus {
-     margin-top: -2rem;
-    bottom: 0;
-    float: right;
-    right: 7rem;
-    right: 7rem;
-    margin-bottom: 1rem;
-    width: 2.5rem;
-}
-
 
 @media only screen and (max-width: 480px)  {
 
@@ -353,27 +366,23 @@ footer {
     margin-top: 1rem;
   }
 
-.qtyminus {
-    float: left;
+.add-to-cart {
+  background-color: aliceblue;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-top: 4rem;
     bottom: 0;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    
- }
-  
-.qty {
-    margin-top: 1rem;
     float: left;
-    bottom: 0;
-    margin-bottom: 1rem;
-    width: 3rem;
+    right: 4rem;
+    width: 11rem;  
+    border-radius: .75rem;
 }
-  
-.qtyplus {
-    margin-top: 1rem;
+
+.remove-all-items {
+    background-color: aliceblue;
+    font-family: 'Nunito Sans', sans-serif;  
     float: left;
-    bottom: 0;
     margin-bottom: 1rem;
- }
+    width: 15rem;
+    border-radius: .75rem;
 }
 
