@@ -102,7 +102,7 @@ sumPrices(products);
       }
     
 
-      $(".remove-items").click(function(event){
+      $(".remove-all-items").click(function(event){
           event.preventDefault();
           var name = $(this).attr("name");
           var price = Number($(this).attr("data-price"));
@@ -146,7 +146,8 @@ var Item = function(name, price, count) {
             cart.push(item);
             saveCart();
       }
-
+      
+      console.log( countCart());
       
       
         function removeItemFromCart(name, price, count) { // Removes one item
