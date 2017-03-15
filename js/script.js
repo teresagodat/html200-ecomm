@@ -79,15 +79,16 @@ sumPrices(products);
 /////////////////////////////////////////////////////////
 
 // J Query //
+// no longer need this function 
 
-    $(".add-to-cart").click(function(event){
-          event.preventDefault();
-          var name = $(this).attr("name");
-          var price = Number($(this).attr("price"));
-        
-          addItemToCart(name, price, 1);
-          displayCart();
-      });
+//    $(".add-to-cart").click(function(event){
+//          event.preventDefault();
+//          var name = $(this).attr("name");
+//          var price = Number($(this).attr("price"));
+//        
+//          addItemToCart(name, price, 1);
+//          displayCart();
+//      });
       
   
       $("#clear-cart").click(function(event){
@@ -105,9 +106,9 @@ sumPrices(products);
       $(".remove-all-items").click(function(event){
           event.preventDefault();
           var name = $(this).attr("name");
-          var price = Number($(this).attr("data-price"));
+          var price = Number($(this).attr("price"));
         
-          removeItemFromCart(name, price, 1);
+          removeItemFromCart(name);
           displayCart();
       });
  
@@ -139,18 +140,20 @@ var Item = function(name, price, count) {
                if (cart[i].name === name) {
                   cart[i].count += count;
                   saveCart();
+                  displayCart();
                   return;
                }
             }
             var item = new Item(name, price, count);
             cart.push(item);
             saveCart();
+            displayCart();
       }
       
       console.log( countCart());
       
       
-        function removeItemFromCart(name, price, count) { // Removes one item
+        function removeItemFromCart(name) { // Removes one item
             for (var i in cart) {
                 if (cart[i].name === name) { 
                     cart[i].count --;
@@ -188,10 +191,10 @@ var Item = function(name, price, count) {
               }
               
               return totalCount;
-        }
         
-        console.log( countCart());
-      
+        saveCart();
+        displayCart();
+      }
 //        function totalCart() {//-> return total cost
 //              var totalCost = 0;
 //              for (var i in this.cart) {
