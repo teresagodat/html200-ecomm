@@ -250,3 +250,17 @@ products.sort(function (a,b) {
   return 0;
 });
 console.log(products);
+
+////////////////////////////////////////////
+// filter products
+
+//still working on getting the sort to be dynamic//
+
+//populateProducts();
+//
+//
+//
+//function sortProducts(event) {
+//  event.preventDefault();
+//  var container = document.getElementById("item-container");
+//  var sortBy = document.sortMe.sort.value;
